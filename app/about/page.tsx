@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TerrariumScene } from "../components/TerrariumScene";
+import Image from "next/image";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
@@ -41,7 +41,13 @@ export default function AboutPage() {
         </div>
 
         <div className={styles.figure}>
-          <TerrariumScene fit="cover" />
+          <Image
+            src="/scene-wood.png"
+            alt="원목 장식장 위에 놓인 카람 테라리움"
+            fill
+            sizes="(max-width: 880px) 100vw, 45vw"
+            className={styles.figureImg}
+          />
         </div>
       </div>
 
