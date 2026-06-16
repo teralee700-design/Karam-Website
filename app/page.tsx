@@ -91,11 +91,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <div className={styles.foot}>
-        <span>살아 있는 풍경&nbsp;&nbsp;/&nbsp;&nbsp;테라리움 &amp; 오브제&nbsp;&nbsp;/&nbsp;&nbsp;2026</span>
-        <span>KARAM STUDIO</span>
-      </div>
     </>
   );
 }

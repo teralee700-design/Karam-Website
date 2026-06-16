@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products, getProduct, formatPrice } from "../../data/products";
 import { Gallery } from "./Gallery";
-import { AddToCart } from "./AddToCart";
+import { BuyBox } from "./BuyBox";
 import { Accordion } from "./Accordion";
 import styles from "./detail.module.css";
 
@@ -35,12 +36,15 @@ export default async function ProductPage({
 
   // Build a gallery: the product image first, then complementary scenes.
   const images = [product.image, ...SCENES.filter((s) => s !== product.image)];
+  const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   return (
     <section className={styles.page}>
-      <Link href="/shop" className={styles.back}>
-        ← 제품으로 돌아가기
-      </Link>
+      <nav className={styles.breadcrumb}>
+        <Link href="/shop">제품</Link>
+        <span className={styles.sep}>/</span>
+        <span className={styles.current}>{product.name}</span>
+      </nav>
 
       <div className={styles.layout}>
         <Gallery images={images} alt={product.name} />
@@ -55,10 +59,11 @@ export default async function ProductPage({
 
           <p className={styles.blurb}>{product.blurb}</p>
 
-          <AddToCart
+          <BuyBox
             id={product.id}
             name={product.name}
             price={product.price}
+            image={product.image}
           />
 
           <div className={styles.accGroup}>
@@ -80,6 +85,29 @@ export default async function ProductPage({
               </ul>
             </Accordion>
           </div>
+        </div>
+      </div>
+
+      {/* related products */}
+      <div className={styles.related}>
+        <div className={styles.relatedHead}>다른 풍경</div>
+        <div className={styles.relatedGrid}>
+          {related.map((p) => (
+            <Link key={p.id} href={`/shop/${p.id}`} className={styles.relCard}>
+              <div className={styles.relThumb}>
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  sizes="(max-width: 560px) 50vw, 30vw"
+                />
+              </div>
+              <div className={styles.relMeta}>
+                <span className={styles.relName}>{p.name}</span>
+                <span className={styles.relPrice}>{formatPrice(p.price)}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

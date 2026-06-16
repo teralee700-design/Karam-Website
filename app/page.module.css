@@ -48,12 +48,13 @@
   right: 0;
   bottom: clamp(8px, 3vh, 40px);
   text-align: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
+  font-weight: 500;
   color: #f6f3ec;
-  font-size: clamp(80px, 23vw, 340px);
+  font-size: clamp(86px, 24vw, 360px);
   line-height: 0.9;
-  letter-spacing: 0.04em;
-  padding-left: 0.04em;
+  letter-spacing: 0.02em;
+  padding-left: 0.02em;
   user-select: none;
 }
 
@@ -187,7 +188,7 @@
     display: flex;
   }
   .heroImg {
-    object-position: 58% center;
+    object-position: 80% center;
   }
   .brand {
     grid-template-columns: 1fr;

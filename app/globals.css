@@ -4,14 +4,14 @@
    ============================================================ */
 
 :root {
-  --bg: #f4f1ea;
-  --bg-deep: #ece7db;
+  --bg: #ffffff;
+  --bg-deep: #f3f1ec;
   --ink: #211c17;
   --ink-strong: #1b1812;
   --ink-soft: #4a453c;
   --ink-faint: #5c564d;
   --muted: #8c857a;
-  --line: #c9c2b5;
+  --line: #e4e0d8;
   --accent: #9c5a3c;
   --accent-soft: #b9714e;
 
@@ -21,6 +21,7 @@
 
   --font-sans: var(--font-noto-sans-kr), "Helvetica Neue", Arial, sans-serif;
   --font-serif: var(--font-song-myung), "Nanum Myeongjo", serif;
+  --font-display: var(--font-playfair), "Song Myung", "Nanum Myeongjo", serif;
 }
 
 * {

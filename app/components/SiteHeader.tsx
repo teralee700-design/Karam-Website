@@ -14,7 +14,7 @@ const NAV = [
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const { count } = useCart();
+  const { count, openCart } = useCart();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -70,9 +70,13 @@ export function SiteHeader() {
           <Link href="/shop" className={`${styles.link} ${styles.hideSmall}`}>
             계정
           </Link>
-          <Link href="/shop" className={`${styles.link} ${styles.cart}`}>
+          <button
+            type="button"
+            className={`${styles.link} ${styles.cart}`}
+            onClick={openCart}
+          >
             장바구니 ({count})
-          </Link>
+          </button>
         </div>
       </header>
 
@@ -83,9 +87,17 @@ export function SiteHeader() {
             {item.label}
           </Link>
         ))}
-        <Link href="/shop" className={styles.panelLink}>
+        <button
+          type="button"
+          className={styles.panelLink}
+          style={{ textAlign: "left", background: "none" }}
+          onClick={() => {
+            setMenuOpen(false);
+            openCart();
+          }}
+        >
           장바구니 ({count})
-        </Link>
+        </button>
         <div className={styles.panelRow}>
           <span>KOR | ₩</span>
           <span>검색</span>

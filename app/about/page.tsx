@@ -50,14 +50,6 @@ export default function AboutPage() {
           />
         </div>
       </div>
-
-      <footer className={styles.footer}>
-        <span className={styles.footMuted}>
-          살아 있는 풍경&nbsp;&nbsp;/&nbsp;&nbsp;테라리움 &amp;
-          오브제&nbsp;&nbsp;/&nbsp;&nbsp;2026
-        </span>
-        <span className={styles.footMuted}>KARAM STUDIO</span>
-      </footer>
     </section>
   );
 }
