@@ -16,7 +16,7 @@ export function NewsletterForm() {
   if (done) {
     return (
       <p className={styles.thanks}>
-        구독해 주셔서 감사합니다. 카람의 새로운 풍경을 가장 먼저 전해드릴게요.
+        구독해 주셔서 감사합니다. 가람의 새로운 풍경을 가장 먼저 전해드릴게요.
       </p>
     );
   }

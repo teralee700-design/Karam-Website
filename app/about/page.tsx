@@ -5,7 +5,7 @@ import styles from "./about.module.css";
 export const metadata: Metadata = {
   title: "브랜드 소개",
   description:
-    "카람은 빠르게 흘러가는 일상 속에서 잠시 멈추어 숨 쉴 수 있는 작은 자연을 만듭니다.",
+    "가람은 빠르게 흘러가는 일상 속에서 잠시 멈추어 숨 쉴 수 있는 작은 자연을 만듭니다.",
 };
 
 const FEATURES = ["자생 이끼 · 천연 소재", "자급형 생태 순환", "소량 핸드메이드"];
@@ -22,12 +22,12 @@ export default function AboutPage() {
             작은 유리 안에
           </h1>
           <p className={`${styles.para} ${styles.firstPara}`}>
-            카람은 빠르게 흘러가는 일상 속에서 잠시 멈추어 숨 쉴 수 있는 작은
+            가람은 빠르게 흘러가는 일상 속에서 잠시 멈추어 숨 쉴 수 있는 작은
             자연을 만듭니다. 이끼와 돌, 천천히 자라는 고사리를 유리 안에 담아
             하나의 풍경으로 완성합니다.
           </p>
           <p className={styles.para}>
-            절제된 선과 차분한 재료, 그리고 시간. 카람의 테라리움은 손이 많이
+            절제된 선과 차분한 재료, 그리고 시간. 가람의 테라리움은 손이 많이
             가지 않아도 스스로 균형을 이루며, 머무는 자리마다 고요를 더합니다.
           </p>
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
         <div className={styles.figure}>
           <Image
             src="/scene-wood.png"
-            alt="원목 장식장 위에 놓인 카람 테라리움"
+            alt="원목 장식장 위에 놓인 가람 테라리움"
             fill
             sizes="(max-width: 880px) 100vw, 45vw"
             className={styles.figureImg}

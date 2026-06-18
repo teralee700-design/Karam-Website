@@ -28,7 +28,7 @@ export default function ShopPage() {
       <div className={styles.feature}>
         <Image
           src="/hero.png"
-          alt="유리 큐브 안에 담긴 카람의 테라리움"
+          alt="유리 큐브 안에 담긴 가람의 테라리움"
           fill
           priority
           sizes="100vw"

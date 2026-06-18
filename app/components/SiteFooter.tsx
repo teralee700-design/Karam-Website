@@ -48,7 +48,7 @@ export function SiteFooter() {
             <h2 className={styles.newsHead}>
               자연을 들여오는 소식,
               <br />
-              카람의 풍경을 가장 먼저.
+              가람의 풍경을 가장 먼저.
             </h2>
             <p className={styles.newsSub}>
               새로운 테라리움과 작은 이야기, 그리고 한정 제작 소식을 이메일로

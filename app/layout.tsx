@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     template: "%s · Karam",
   },
   description:
-    "카람은 작은 유리 프레임 안에 자연을 담아 일상으로 들여옵니다. 이끼와 돌, 천천히 자라는 고사리로 빚은 살아 있는 풍경.",
-  keywords: ["Karam", "카람", "테라리움", "terrarium", "이끼", "식물", "오브제"],
+    "가람은 작은 유리 프레임 안에 자연을 담아 일상으로 들여옵니다. 이끼와 돌, 천천히 자라는 고사리로 빚은 살아 있는 풍경.",
+  keywords: ["Karam", "가람", "테라리움", "terrarium", "이끼", "식물", "오브제"],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
